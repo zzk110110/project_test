@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>华北电力大学 · 氢能项目</title>
+    <style>
+        /* ===== 全局重置 & 基础（与论证报告完全一致） ===== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f9fc;
+            font-family: 'Times New Roman', '宋体', 'SimSun', serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #1e2a3a;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 60px 70px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border-radius: 4px;
+        }
+
+        /* ===== 标题区（复用 doc-header） ===== */
+        .doc-header {
+            text-align: center;
+            border-bottom: 2px solid #1a3a5c;
+            padding-bottom: 28px;
+            margin-bottom: 32px;
+        }
+
+        .doc-header .school {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: #1a3a5c;
+        }
+
+        .doc-header .title {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #0a2a4a;
+            margin: 12px 0 8px 0;
+        }
+
+        .doc-header .meta {
+            font-size: 16px;
+            color: #2c3e50;
+            margin-top: 6px;
+            letter-spacing: 1px;
+        }
+
+        .doc-header .meta span {
+            display: inline-block;
+            margin: 0 16px;
+        }
+
+        /* ===== 通用标题（保留以备扩展） ===== */
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0a2a4a;
+            margin: 36px 0 18px 0;
+            border-left: 4px solid #1a5a8c;
+            padding-left: 14px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1a3a5c;
+            margin: 28px 0 14px 0;
+            padding-left: 10px;
+            border-left: 3px solid #3a7aac;
+        }
+
+        p {
+            margin-bottom: 14px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+
+        /* ===== 导航卡片（新增） ===== */
+        .nav-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-card {
+            display: inline-block;
+            min-width: 200px;
+            padding: 24px 40px;
+            background: #f5f9ff;
+            border: 1px solid #bccbd9;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            color: #0a2a4a;
+            text-decoration: none;
+            transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+
+        .nav-card:hover {
+            background: #eaf0f8;
+            box-shadow: 0 4px 12px rgba(26, 58, 92, 0.15);
+            transform: translateY(-2px);
+            border-color: #1a5a8c;
+        }
+
+        .nav-card:active {
+            transform: translateY(0);
+        }
+
+        /* ===== 底部信息 ===== */
+        .footer-note {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #d0dce8;
+            color: #5a6f84;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== 响应式（与论证报告一致） ===== */
+        @media (max-width: 768px) {
+            .container {
+                padding: 28px 20px;
+            }
+
+            .doc-header .title {
+                font-size: 22px;
+                letter-spacing: 1px;
+            }
+
+            .doc-header .meta span {
+                display: block;
+                margin: 4px 0;
+            }
+
+            .nav-grid {
+                gap: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-card {
+                min-width: 160px;
+                padding: 18px 30px;
+                font-size: 18px;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media print {
+            body {
+                background: #ffffff;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                padding: 40px 50px;
+            }
+            .nav-card {
+                border: 1px solid #888;
+                background: #f3f3f3;
+            }
+            .nav-card:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== 头部 ===== -->
+        <div class="doc-header">
+            <div class="school">华北电力大学</div>
+            <div class="title">氢能科学与工程</div>
+            <div class="meta">
+                <span>能源动力与机械工程学院</span>
+                <span>项目导航</span>
+            </div>
+        </div>
+
+        <!-- ===== 导航卡片 ===== -->
+        <div class="nav-grid">
+            <a href="Web/本科教育.html" class="nav-card">本科教育</a>
+            <a href="Web/研究生教育.html" class="nav-card">研究生教育</a>
+        </div>
+
+        <!-- ===== 底部信息 ===== -->
+        <div class="footer-note">
+            © 2026 华北电力大学 · 氢能科学与工程
+            <br>
+            相关链接：
+            <br>
+            <a href="https://goto.ncepu.edu.cn/yxzy/nydlyjxgcxy/index.htm" target="_blank">
+                https://goto.ncepu.edu.cn/yxzy/nydlyjxgcxy/index.htm</a>
+                <br>
+            <a href="https://thermal.ncepu.edu.cn/zspy/bkszspy/index.htm" target="_blank">
+                https://thermal.ncepu.edu.cn/zspy/bkszspy/index.htm</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
