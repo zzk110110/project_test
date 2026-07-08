@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>华北电力大学 · 氢能项目</title>
+    <!-- 添加搜索功能 -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
     <style>
         /* ===== 全局重置 & 基础（与论证报告完全一致） ===== */
         *,
@@ -192,10 +194,7 @@
     </style>
 </head>
 <body>
-
     <div class="container">
-
-        <!-- ===== 头部 ===== -->
         <div class="doc-header">
             <div class="school">华北电力大学</div>
             <div class="title">氢能科学与工程</div>
@@ -205,26 +204,24 @@
             </div>
         </div>
 
-        <!-- ===== 导航卡片 ===== -->
+        <!-- ===== 搜索框容器（新增） ===== -->
+        <div id="search-container"></div>
+
         <div class="nav-grid">
             <a href="Web/本科教育.html" class="nav-card">本科教育</a>
             <a href="Web/研究生教育.html" class="nav-card">研究生教育</a>
         </div>
 
-        <!-- ===== 底部信息 ===== -->
         <div class="footer-note">
             © 2026 华北电力大学 · 氢能科学与工程
-            <br>
-            相关链接：
-            <br>
-            <a href="https://goto.ncepu.edu.cn/yxzy/nydlyjxgcxy/index.htm" target="_blank">
-                https://goto.ncepu.edu.cn/yxzy/nydlyjxgcxy/index.htm</a>
-                <br>
-            <a href="https://thermal.ncepu.edu.cn/zspy/bkszspy/index.htm" target="_blank">
-                https://thermal.ncepu.edu.cn/zspy/bkszspy/index.htm</a>
+            <br>相关链接：
+            <br><a href="https://goto.ncepu.edu.cn/yxzy/nydlyjxgcxy/index.htm" target="_blank">https://goto.ncepu.edu.cn/yxzy/nydlyjxgcxy/index.htm</a>
+            <br><a href="https://thermal.ncepu.edu.cn/zspy/bkszspy/index.htm" target="_blank">https://thermal.ncepu.edu.cn/zspy/bkszspy/index.htm</a>
         </div>
-
     </div>
 
+    <!-- ===== 引入搜索数据与搜索逻辑 ===== -->
+    <script src="search-data.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>
